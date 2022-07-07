@@ -13,16 +13,16 @@ const config = {
         update: update
     }
 }
-var cofre1;
-var cofre2;
-var cofre3;
-var cofre4;
-var cofre5;
-var cofre6;
-var cofre7;
-var cofre8;
-var cofre9;
-var cofre10;
+var puesto1;
+var puesto2;
+var puesto3;
+var puesto4;
+var puesto5;
+var puesto6;
+var puesto7;
+var puesto8;
+var puesto9;
+var puesto10;
 
 var usu1;
 var usu2;
@@ -89,147 +89,174 @@ function preload(){
 
 function create(){
    this.add.image(0,0,"fondo").setOrigin(0);
-   var puesto1 = this.add.image(138,530,"puesto1").setVisible(false);
-   var puesto2 = this.add.image(107,582,"puesto2").setVisible(false);
-   var puesto3 = this.add.image(369,530,"puesto3").setVisible(false);
-   var puesto4 = this.add.image(345,582,"puesto4").setVisible(false);
-   var puesto5 = this.add.image(635,530,"puesto5").setVisible(false);
-   var puesto6 = this.add.image(650,582,"puesto6").setVisible(false);
-   var puesto7 = this.add.image(900,530,"puesto7").setVisible(false);
-   var puesto8 = this.add.image(890,582,"puesto8").setVisible(false);
-   var puesto9 = this.add.image(1182,530,"puesto9").setVisible(false);
-   var puesto10 = this.add.image(1190,585,"puesto10").setVisible(false);
+   puesto1 = this.add.image(138,530,"puesto1").setVisible(false);
+   puesto2 = this.add.image(107,582,"puesto2").setVisible(false);
+   puesto3 = this.add.image(369,530,"puesto3").setVisible(false);
+   puesto4 = this.add.image(345,582,"puesto4").setVisible(false);
+   puesto5 = this.add.image(635,530,"puesto5").setVisible(false);
+   puesto6 = this.add.image(650,582,"puesto6").setVisible(false);
+   puesto7 = this.add.image(900,530,"puesto7").setVisible(false);
+   puesto8 = this.add.image(890,582,"puesto8").setVisible(false);
+   puesto9 = this.add.image(1182,530,"puesto9").setVisible(false);
+   puesto10 = this.add.image(1190,585,"puesto10").setVisible(false);
    
+ console.log(this.tweens);
+    
    //console.log(Phaser.Input.Keyboard.KeyCodes);
 
-   //var spaceKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+   var spaceKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
    
 
-   //Competidores
+   //Competidores Iniciales
 
-   var usu1 = this.add.image(76,28, 'ePacman');
-   var usu1Fin = this.tweens.add({
+   usu1 = this.add.image(76,28, 'ePacman');
+   usu2 = this.add.image(76,70, 'princesaPeach'); 
+   usu3 = this.add.image(76,113, 'ralph'); 
+   usu4 = this.add.image(76, 156, 'vanellope'); 
+   usu5 = this.add.image(76,199, 'chunLi'); 
+   usu6 = this.add.image(76,244, 'sonic'); 
+   usu7 = this.add.image(76,288, 'pikachu');
+   usu8 = this.add.image(76,330, 'mario'); 
+   usu9 = this.add.image(76,373, 'luigi');
+   usu10 = this.add.image(76,417, 'toadette'); 
+
+  //Componetes de los competidores
+
+   var usu1Fin  = this.tweens.add({
     targets: usu1,
     x: 1280,
-    ease: 'linear',
+    ease: 'Power1',
     duration: 6900,
+    paused: true,
     onComplete: onCompleteHandler,
     onCompleteParams: [ puesto10 ]
-  });
+});
 
- var usu2 = this.add.image(76,70, 'princesaPeach'); 
  var usu2Fin = this.tweens.add({
   targets: usu2,
   x: 1280,
   ease: 'Power1',
   duration: 6000,
+  paused: true,
   onComplete: onCompleteHandler,
   onCompleteParams: [ puesto7 ]
 });
 
 
- var usu3 = this.add.image(76,113, 'ralph'); 
+ 
  var usu3Fin = this.tweens.add({
   targets: usu3,
   x: 1280,
   ease: 'Power1',
   duration: 4000,
+  paused: true,
   onComplete: onCompleteHandler,
   onCompleteParams: [ puesto1 ]
 });
    
 
-   var usu4 = this.add.image(76, 156, 'vanellope'); 
+   
    var usu4Fin = this.tweens.add({
     targets: usu4,
     x: 1280,
     ease: 'Power1',
     duration: 5700,
+    paused: true,
     onComplete: onCompleteHandler,
     onCompleteParams: [ puesto6 ]
 }); 
 
 
 
- var usu5 = this.add.image(76,199, 'chunLi'); 
+
  var usu5Fin = this.tweens.add({
   targets: usu5,
   x: 1280,
   ease: 'Power1',
   duration: 6600,
+  paused: true,
   onComplete: onCompleteHandler,
   onCompleteParams: [ puesto9 ]
 });
    
 
- var usu6 = this.add.image(76,244, 'sonic'); 
+ 
  var usu6Fin = this.tweens.add({
   targets: usu6,
   x: 1280,
   ease: 'Power1',
   duration: 4500,
+  paused: true,
   onComplete: onCompleteHandler,
   onCompleteParams: [ puesto2 ]
 });
 
    
 
- var usu7 = this.add.image(76,288, 'pikachu'); 
+  
  var usu7Fin = this.tweens.add({
   targets: usu7,
   x: 1280,
   ease: 'Power1',
   duration: 5100,
+  paused: true,
   onComplete: onCompleteHandler,
   onCompleteParams: [ puesto4 ]
 });
 
-
-   var usu8 = this.add.image(76,330, 'mario'); 
+   
    var usu8Fin = this.tweens.add({
     targets: usu8,
     x: 1280,
     ease: 'Power1',
     duration: 6300,
+    paused: true,
     onComplete: onCompleteHandler,
     onCompleteParams: [ puesto8 ]
 }); 
   
-
-  var usu9 = this.add.image(76,373, 'luigi'); 
+  
    var usu9Fin = this.tweens.add({
     targets: usu9,
     x: 1280,
     ease: 'Power1',
     duration: 5400,
+    paused: true,
     onComplete: onCompleteHandler,
     onCompleteParams: [ puesto5 ]
 }); 
    
-
-  var usu10 = this.add.image(76,417, 'toadette'); 
+ 
    var usu10Fin = this.tweens.add({
     targets: usu10,
     x: 1280,
     ease: 'Power1',
     duration: 4800,
+    paused: true,
     onComplete: onCompleteHandler,
     onCompleteParams: [ puesto3 ]
 }); 
    
-
-
 function onCompleteHandler (tween, targets, myImage)
 {
     console.log('onCompleteHandler');
-
-    myImage.setVisible(true);
-
-    
+    myImage.setVisible(true);  
 }
 
-  
+spaceKey.on('down', function (key, event) {
+
+  usu1Fin.play();
+  usu2Fin.play();
+  usu3Fin.play();
+  usu4Fin.play();
+  usu5Fin.play();
+  usu6Fin.play();
+  usu7Fin.play();
+  usu8Fin.play();
+  usu9Fin.play();
+  usu10Fin.play();
+}); 
 
 
 
